@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(rgb(115, 115, 234), rgb(106, 196, 226));
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #profile-card {
+            
+            background-color: #a4fbe3;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            height: 390px;
+            margin-left:-100px ;
+            margin-top: -40px;
+
+         }
+        #sec-prfile-info{
+            display: none;
+            background-color: #a4fbe3;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            
+         }
+
+        .profile-image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .profile-info {
+            padding: 20px;
+            text-align: center;
+            align-content: center;
+        }
+
+        h1 {
+            margin: 0;
+            color: #333;
+        }
+
+        p {
+            margin-top: 5px;
+            color: #666;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db;
+        }
+        #imge{
+            width: 110px;
+            height: 230px;
+            margin-left: 80px;
+        }
+        #btn{
+            margin-top: 390px;
+            margin-left: -150px;
+            border-radius: 2px;
+        }
+        #image{
+            width: 30px;
+            height: 70px;
+            margin-left: 10px;
+        }
+        .text{
+            font-weight: bolder;
+            font-size:larger;
+        }
+        table{
+            width: 300px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="profile-card">
+    <div class="profile-image">
+        <img src="C:\Users\HP\Desktop\Internship\snap-pic.png" id="imge">
+    </div>
+    <div class="profile-info">
+        <h1>Pranjal Ambekar</h1>
+        <p>Web Developer in Training</p>
+        <p>Intern at <a href="https://widesoftech.com/">Wide Softech</a> </p>
+        
+    </div>
+</div>
+<button id="btn">˅</button>             
+
+<div id="sec-prfile-info">
+    <div class="prfile-icon"> 
+        <table  >
+            <tr>
+                <td class="icon">
+                    <img src="C:\Users\HP\Desktop\Internship\snap-pic.png" id="image">
+                </td>
+                <td>
+                    <p class="text"><b>Skills & Project</b> </p>
+                </td>
+            </tr>
+        </table>
+ 
+    
+    <hr style="margin-top: -5px;">
+    <div>
+        <p><u>Technical Skills</u> </p>
+        <p>
+            <ul>
+                <li>Front-end languages</li>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+                <li>C/C++</li>
+                <li>Power BI</li>
+                <li>Python</li>
+            </ul>
+        </p>
+        <p class="text"><u>Projects</u></p>
+        <p>
+            <ul>
+                <li>Front-end Project</li>
+                <a href="file:///C:/Users/HP/Desktop/Internship/Tasks/web2.html"> Clone Website</a>
+                <li>Power BI Dashboard</li>
+                <a href="https://drive.google.com/file/d/1tuX7Ve4Dp36xVCMlrLcV2ElHRKQPfCr1/view?usp=drive_link">Dashboard</a>
+            </ul>
+            
+        </p>
+    </div>
+</div>
+</div>
+<script>
+    const btn=document.getElementById("btn");
+   const btnobj=document.getElementById("sec-prfile-info");
+   const part1=document.getElementById("profile-card") ;
+   var count=0;
+   btn.addEventListener("click",(e)=>{
+    if(count==0){
+        btnobj.style.display="flex";
+        part1.style.display="none";
+        btn.style.marginTop="390px";
+        btn.style.marginLeft="150px";
+        btnobj.style.marginTop="-35px";
+        btnobj.style.marginLeft="-150px";
+        count++;
+    }
+    else{
+        btnobj.style.display="none";
+        part1.style.display="inline-block";
+        btn.style.marginTop="390px";
+        btn.style.marginLeft="200px";
+        btnobj.style.marginTop="-100px";
+        btnobj.style.marginLeft="-40px";
+        count--;
+    }
+        })
+   
+</script>
+
+</body>
+</html>
